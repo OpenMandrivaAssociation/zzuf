@@ -2,13 +2,14 @@
 
 Summary:    A transparent application input fuzzer	
 Name:		zzuf
-Version:	0.8
+Version:	0.8.1
 Release:	%mkrel %rel
 Source0:	http://sam.zoy.org/%name/%name-%version.tar.bz2
 License:	DWTFYWTPL
 Group:		Development/Other
 Url:		http://sam.zoy.org/%name/
 BuildRoot:	%{_tmppath}/%{name}-%{version}-%{release}-buildroot
+BuildRequires:	autoconf2.5
 
 %description
 zzuf is a transparent application input fuzzer. Its purpose is to find bugs in 
@@ -30,7 +31,7 @@ successfully used to find bugs in system utilities such as objdump.
 %setup -q
 
 %build
-%configure
+%configure2_5x
 %make
 
 %install

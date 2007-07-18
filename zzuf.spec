@@ -2,7 +2,7 @@
 
 Summary:    A transparent application input fuzzer	
 Name:		zzuf
-Version:	0.8.1
+Version:	0.9
 Release:	%mkrel %rel
 Source0:	http://sam.zoy.org/%name/%name-%version.tar.bz2
 License:	DWTFYWTPL

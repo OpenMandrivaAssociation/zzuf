@@ -8,7 +8,6 @@ Source0:	http://sam.zoy.org/%name/%name-%version.tar.bz2
 License:	DWTFYWTPL
 Group:		Development/Other
 Url:		http://sam.zoy.org/%name/
-BuildRoot:	%{_tmppath}/%{name}-%{version}-%{release}-buildroot
 BuildRequires:	autoconf2.5
 
 %description

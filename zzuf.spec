@@ -4,7 +4,7 @@ Summary:    A transparent application input fuzzer
 Name:		zzuf
 Version:	0.10
 Release:	%mkrel %rel
-Source0:	http://libcaca.zoy.org/files/http://sam.zoy.org/%name/%name-%version.tar.gz
+Source0:	http://libcaca.zoy.org/files/%name/%name-%version.tar.gz
 License:	DWTFYWTPL
 Group:		Development/Other
 Url:		http://libcaca.zoy.org/wiki/%name

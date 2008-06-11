@@ -4,10 +4,10 @@ Summary:    A transparent application input fuzzer
 Name:		zzuf
 Version:	0.10
 Release:	%mkrel %rel
-Source0:	http://sam.zoy.org/%name/%name-%version.tar.bz2
+Source0:	http://libcaca.zoy.org/files/http://sam.zoy.org/%name/%name-%version.tar.gz
 License:	DWTFYWTPL
 Group:		Development/Other
-Url:		http://sam.zoy.org/%name/
+Url:		http://libcaca.zoy.org/wiki/%name
 BuildRoot:	%{_tmppath}/%{name}-%{version}-%{release}-buildroot
 BuildRequires:	autoconf2.5
 

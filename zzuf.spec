@@ -2,10 +2,10 @@
 
 Summary:    A transparent application input fuzzer
 Name:		zzuf
-Version:	0.11
+Version:	0.12
 Release:	%mkrel %rel
 Source0:	http://libcaca.zoy.org/files/%name/%name-%version.tar.gz
-License:	DWTFYWTPL
+License:	WTFPL
 Group:		Development/Other
 Url:		http://libcaca.zoy.org/wiki/%name
 BuildRoot:	%{_tmppath}/%{name}-%{version}-%{release}-buildroot
@@ -46,6 +46,7 @@ rm -rf $RPM_BUILD_ROOT
 %defattr(-,root,root)
 %_bindir/*
 %_mandir/man1/*
+%_mandir/man3/*
 %_libdir/%name/*
 
 

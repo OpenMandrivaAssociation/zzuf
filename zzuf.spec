@@ -1,9 +1,7 @@
-%define rel 1
-
 Summary:    A transparent application input fuzzer
 Name:		zzuf
 Version:	0.12
-Release:	%mkrel %rel
+Release:	%mkrel 2
 Source0:	http://libcaca.zoy.org/files/%name/%name-%version.tar.gz
 License:	WTFPL
 Group:		Development/Other

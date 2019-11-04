@@ -6,6 +6,11 @@ Source0:	https://github.com/samhocevar/zzuf/releases/download/v%{version}/%{name
 License:	WTFPL
 Group:		Development/Other
 Url:		http://libcaca.zoy.org/wiki/%name
+Patch0:         %{name}-0.13-optflags.patch
+# AC_TRY_CFLAGS doesn't honor CFLAGS
+# Causes package to produce broken configure results
+Patch1:         %{name}-0.13-Remove-AC_TRY_CFLAGS.patch
+Patch2:		zzuf-0.15-glibc.patch
 BuildRoot:	%{_tmppath}/%{name}-%{version}-%{release}-buildroot
 BuildRequires:	autoconf2.5
 
@@ -27,6 +32,10 @@ because the data they process is inherently insecure, but it was also
 successfully used to find bugs in system utilities such as objdump.
 %prep
 %setup -q
+%patch0 -p0
+%patch1 -p1
+%patch2 -p0
+touch -r aclocal.m4 configure.*
 
 %build
 autoreconf -if

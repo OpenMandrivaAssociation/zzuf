@@ -1,11 +1,16 @@
 Summary:    A transparent application input fuzzer
 Name:		zzuf
-Version:	0.13
-Release:	3
-Source0:	http://libcaca.zoy.org/files/%name/%name-%version.tar.gz
+Version:	0.15
+Release:	1
+Source0:	https://github.com/samhocevar/zzuf/releases/download/v%{version}/%{name}-%{version}.tar.gz
 License:	WTFPL
 Group:		Development/Other
 Url:		http://libcaca.zoy.org/wiki/%name
+Patch0:         %{name}-0.13-optflags.patch
+# AC_TRY_CFLAGS doesn't honor CFLAGS
+# Causes package to produce broken configure results
+Patch1:         %{name}-0.13-Remove-AC_TRY_CFLAGS.patch
+Patch2:		zzuf-0.15-glibc.patch
 BuildRoot:	%{_tmppath}/%{name}-%{version}-%{release}-buildroot
 BuildRequires:	autoconf2.5
 
@@ -27,14 +32,19 @@ because the data they process is inherently insecure, but it was also
 successfully used to find bugs in system utilities such as objdump.
 %prep
 %setup -q
+%patch0 -p0
+%patch1 -p1
+%patch2 -p0
+touch -r aclocal.m4 configure.*
 
 %build
-%configure2_5x
-%make
+autoreconf -if
+%configure --disable-dependency-tracking --disable-static
+%make_build
 
 %install
 rm -rf $RPM_BUILD_ROOT
-%makeinstall
+%make_install
 rm -f %_libdir/%name/*.a
 
 %clean

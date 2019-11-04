@@ -29,7 +29,8 @@ successfully used to find bugs in system utilities such as objdump.
 %setup -q
 
 %build
-%configure
+autoreconf -if
+%configure --disable-dependency-tracking --disable-static
 %make_build
 
 %install

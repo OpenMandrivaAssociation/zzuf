@@ -1,8 +1,8 @@
 Summary:    A transparent application input fuzzer
 Name:		zzuf
-Version:	0.13
-Release:	3
-Source0:	http://libcaca.zoy.org/files/%name/%name-%version.tar.gz
+Version:	0.15
+Release:	1
+Source0:	https://github.com/samhocevar/zzuf/releases/download/v%{version}/%{name}-%{version}.tar.gz
 License:	WTFPL
 Group:		Development/Other
 Url:		http://libcaca.zoy.org/wiki/%name
@@ -29,12 +29,12 @@ successfully used to find bugs in system utilities such as objdump.
 %setup -q
 
 %build
-%configure2_5x
-%make
+%configure
+%make_build
 
 %install
 rm -rf $RPM_BUILD_ROOT
-%makeinstall
+%make_install
 rm -f %_libdir/%name/*.a
 
 %clean

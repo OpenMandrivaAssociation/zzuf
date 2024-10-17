@@ -5,7 +5,7 @@ Release:	1
 Source0:	https://github.com/samhocevar/zzuf/releases/download/v%{version}/%{name}-%{version}.tar.gz
 License:	WTFPL
 Group:		Development/Other
-Url:		http://libcaca.zoy.org/wiki/%name
+Url:		https://libcaca.zoy.org/wiki/%name
 Patch0:         %{name}-0.13-optflags.patch
 # AC_TRY_CFLAGS doesn't honor CFLAGS
 # Causes package to produce broken configure results

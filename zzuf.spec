@@ -12,6 +12,10 @@ Patch0:         %{name}-0.13-optflags.patch
 Patch1:         %{name}-0.13-Remove-AC_TRY_CFLAGS.patch
 Patch2:		zzuf-0.15-glibc.patch
 BuildRoot:	%{_tmppath}/%{name}-%{version}-%{release}-buildroot
+BuildRequires:	automake
+BuildRequires:	libtool-base
+BuildRequires:	slibtool
+BuildRequires:	make
 BuildRequires:	autoconf2.5
 
 %description
